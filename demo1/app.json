@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+  "navigationBarBackgroundColor": "#2fa4e7",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "百拓商旅", 
+  "onReachBottomDistance": "50px"
+  },
+  "tabBar": {
+      "position": "bottom",
+      "color":"#ffffff",
+      "selectedColor":"#ff0000",
+      "backgroundColor":"#2fa4e7", 
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/shouye.png",
+        "selectedIconPath":"images/shou.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "images/wendang.png",
+        "selectedIconPath": "images/wen.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "images/wendang.png",
+        "selectedIconPath": "images/wen.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "images/wendang.png",
+        "selectedIconPath": "images/wen.png"
+      } 
+    ]
+  }
+}
