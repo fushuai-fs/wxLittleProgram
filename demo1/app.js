@@ -1,6 +1,10 @@
 //app.js
 App({
   onLaunch: function (options) {
+    // 打开调试
+    wx.setEnableDebug({
+      enableDebug: true
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

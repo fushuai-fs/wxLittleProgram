@@ -1,0 +1,15 @@
+var foo = "'hello world' from comm.wxs";
+var bar = function (d) {
+  var a = getRegExp("x", "img");
+  console.log("x---------------------------------------------");
+  console.log("source"+a.source);
+  console.log('global'+a.global);
+  console.log("ignoreCase"+a.ignoreCase);
+    console.log("multiline"+a.multiline);
+  console.log("y---------------------------------------------");
+  return d;
+}
+module.exports = {
+  foo: foo,
+  bar: bar
+};

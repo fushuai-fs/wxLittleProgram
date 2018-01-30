@@ -1,4 +1,6 @@
 <!--index.wxml-->
+<import src="item.wxml"/>
+
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -7,9 +9,75 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view  wx:for="{{array}}"> {{item}} </view>
+  <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+  <view wx:elif="{{view == 'APP'}}"> APP </view>
+  <view wx:else="{{view == 'MINA'}}"> MINA </view>
+  <block wx:for="{{items}}">
+  <template is="msgItem" data="{{...item}}"/>
+  </block>
+  
+  <wxs src="./index.wxs" module="tools" />
+  <view> {{tools.foo}} </view>
+  <view> {{tools.bar(tools.foo)}} </view>
+
+  <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default</button>
+  <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="primary"> primary </button>
+  <button type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" bindtap="warn"> warn </button>
+  <button bindtap="setDisabled">点击设置以上按钮disabled属性</button>
+  <button bindtap="setPlain">点击设置以上按钮plain属性</button>
+  <button bindtap="setLoading">点击设置以上按钮loading属性</button>
+  <button open-type="share">分享</button>
+
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </checkbox-group>
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-  <button bindtap="getlocatioFun">获取位置</button>
+  <button id='test' data-id="location" bindtap="getlocationFun">获取位置</button>
     <text class="user-motto">{{location}}</text>
+
+    <form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch"/>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">slider</view>
+    <slider name="slider" show-value ></slider>
+  </view>
+
+  <view class="section">
+    <view class="section__title">input</view>
+    <input name="input" placeholder="please input here" />
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">radio</view>
+    <radio-group name="radio-group">
+      <label><radio value="radio1"/>radio1</label>
+      <label><radio value="radio2"/>radio2</label>
+    </radio-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">checkbox</view>
+    <checkbox-group name="checkbox">
+      <label><checkbox value="checkbox1"/>cbox1</label>
+      <label><checkbox value="checkbox2"/>cbox2</label>
+    </checkbox-group>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
+
 </view>
+
+

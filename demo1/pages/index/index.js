@@ -2,14 +2,56 @@
 //获取应用实例
 const app = getApp()
   var common = require('./module.js')
-
+var types = ['default', 'primary', 'warn']
 Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
     location:'non',
     hasUserInfo: false,
+    array: [1, 2, 3, 4, 5],
+    view: 'MINA',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
+    , items: [{
+      index: 0,
+      msg: 'this is a template',
+      time: '2018-01-25',
+      name: 'USA', value: '美国'
+    }, {
+      index: 1,
+      msg: 'this is a template',
+      time: '2018-01-25',
+      name: 'CHN', value: '中国', checked: 'true'
+      }, { name: 'BRA', value: '巴西' },
+      { name: 'JPN', value: '日本' },
+      { name: 'ENG', value: '英国' },
+      { name: 'TUR', value: '法国' },]
+    ,
+    defaultSize: 'default',
+    primarySize: 'default',
+    warnSize: 'default',
+    disabled: false,
+    plain: false,
+    loading: false
+  },
+  setDisabled: function (e) {
+    this.setData({
+      disabled: !this.data.disabled
+    })
+  },
+  setPlain: function (e) {
+    this.setData({
+      plain: !this.data.plain
+    })
+  },
+  setLoading: function (e) {
+    this.setData({
+      loading: !this.data.loading
+    })
+  },
+  checkboxChange: function (e) {
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value[0])
   },
   //事件处理函数
   bindViewTap: function() {
@@ -81,7 +123,7 @@ Page({
     })
   },
   // 获取地理位置
- getlocatioFun:function(e){ 
+  getlocationFun:function(e){ 
    var that =this;
    wx.getLocation({
      type: '',
@@ -95,7 +137,38 @@ Page({
      complete: function (res) {  },
    }) 
    common.sayHello('MINA')
+   console.log(e);
+   console.log(e.currentTarget.id);
    common.sayGoodbye('MINA')
- }
+
+ },
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    console.log(typeof (e.detail.value));
+    console.log(JSON.stringify (e.detail.value));
+
+    wx.request({
+      url: 'http://172.16.2.162/api/Position/Post',
+      method:'POST',
+      data: {
+        DeviceID: 'wxlittleprogram',
+        Longitude: '110',
+        Latitude:'120',
+        Mark: new Date().toString(),
+        date:new Date()
+      },
+      header: {
+        // 'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
+  }
  
 })
