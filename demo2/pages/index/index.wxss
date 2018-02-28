@@ -1,0 +1,31 @@
+/**index.wxss**/
+.container{
+ flex: 1;
+}
+.header{    
+  width: 98%; 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+.serach{
+  flex-direction: row
+}
+ .userinfo {
+  padding: 5rpx ;
+  display: flex; 
+  flex-direction: column;
+  align-items:flex-end;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx; 
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 24rpx;
+  align-self: center;
+}
+

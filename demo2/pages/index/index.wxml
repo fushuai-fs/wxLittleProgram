@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='header'>
+    <view class='serach'> 
+        <input placeholder="搜索" auto-focus/>
+    </view>
+    <view class="userinfo"> 
+        <image class='userinfo-avatar' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"
+        src="../../images/Yong.png" background-size="cover"></image> 
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> 
+      </block>
+      <text class="userinfo-nickname">{{'我的'}}</text> 
+    </view>
+  </view>
+ 
+</view>
