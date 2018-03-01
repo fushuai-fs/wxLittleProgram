@@ -2,7 +2,7 @@
 <view class="container">
   <view class='header'>
     <view class='serach'> 
-        <input placeholder="搜索" auto-focus/>
+        <input class='input' placeholder="搜索" bindfocus="serachinputbindfocus"/>
     </view>
     <view class="userinfo"> 
         <image class='userinfo-avatar' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"

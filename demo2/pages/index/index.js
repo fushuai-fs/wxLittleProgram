@@ -6,7 +6,8 @@ Page({
   data: { 
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    address:""
   },
   //事件处理函数
   bindViewTap: function () {
@@ -14,7 +15,15 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  
+  serachinputbindfocus:function(e){
+    wx.navigateTo({
+      url: './serach'
+    })
+  },
+
+  onLoad: function (option) {
+    console.log(option);
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -42,6 +51,7 @@ Page({
       })
     }
   },
+ 
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -49,5 +59,20 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  }
+  ,
+   /**
+ * 生命周期函数--监听页面显示
+ */
+  onShow: function () {
+    let pages = getCurrentPages();
+    let currPage = pages[pages.length - 1];
+   
+    if (typeof (currPage.data.refaddress) !="undefined"){ 
+      this.setData({//将携带的参数赋值
+        address: currPage.data.refaddress
+      });
+    }
+     
   }
 })

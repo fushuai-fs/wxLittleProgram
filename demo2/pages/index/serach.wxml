@@ -1,0 +1,27 @@
+<!--pages/index/serach.wxml-->
+
+<view class='container'>
+    <view class='row'>
+        <text>城　市 </text>
+        <input class='input' placeholder="请选择" bindfocus="cityinputbindfocus"/>
+    </view>
+      <view class='row'>
+        <text>酒　店 </text>
+        <input class='input' placeholder="请选择" bindfocus="hotelinputbindfocus"/>
+    </view>
+      <view class='row'>
+        <text>房　型 </text>
+        <input class='input' placeholder="请选择" bindfocus="roominputbindfocus"/>
+    </view>
+      <view class='row'>
+        <text>日　期 </text>
+        <input class='input' placeholder="请选择" bindfocus="dateinputbindfocus"/>
+    </view>
+      <view class='row'>
+        <text>房间数 </text>
+        <input class='input' placeholder="房间数" type='number'/>
+    </view>
+    　<view class='row'>
+       　<button type='primary' bindtap="confirm"> 搜索 </button>
+    </view>
+</view>

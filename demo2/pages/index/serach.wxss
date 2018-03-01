@@ -1,0 +1,12 @@
+/* pages/index/serach.wxss */
+.row{ 
+   display: flex;
+   margin-top: 10rpx; 
+}
+.input{
+  margin-left: 10rpx;
+  text-align: center; 
+  border-style: solid;
+  border-width: 1rpx;
+  border-color:black;
+}

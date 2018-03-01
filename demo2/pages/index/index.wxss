@@ -4,18 +4,24 @@
 }
 .header{    
   width: 98%; 
-  display: flex; 
-  justify-content: space-between;
+  display: flex;  
   align-items: center;
 }
 .serach{
-  flex-direction: row
+  flex-direction: row;
+   flex: 9;
 }
- .userinfo {
+.input{ 
+   height: 85rpx;
+   text-align: center;
+   color: #aaa;
+}
+ .userinfo { 
   padding: 5rpx ;
   display: flex; 
   flex-direction: column;
-  align-items:flex-end;
+  flex: 1;
+   
 }
 
 .userinfo-avatar {
