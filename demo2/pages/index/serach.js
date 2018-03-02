@@ -5,8 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    city:'北京',
-    hotel:''
+    city:'',
+    hotel:{},
+    room:'',
+    daterange:'',
+    roomnum:1
   },
  
   confirm:function(){
@@ -57,6 +60,12 @@ Page({
     if (typeof (currPage.data.refcity) != "undefined") {
       this.setData({//将携带的参数赋值
         city: currPage.data.refcity
+      });
+    }
+   
+    if (typeof (currPage.data.refhotel) !="undefined"){
+      this.setData({
+        hotel: currPage.data.refhotel
       });
     }
   },

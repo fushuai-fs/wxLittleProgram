@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:[1,2,3,4,5]
+    array: ['北京', '上海', '首尔', '济州岛', '芽庄','大叻','长滩岛']
   },
   itemclick:function(e){ 
     var city = e.target.dataset.value;

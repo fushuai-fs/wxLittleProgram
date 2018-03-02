@@ -1,15 +1,23 @@
 /* pages/index/serach.wxss */
 .row{ 
    display: flex;
-   margin-top: 10rpx;  
+   margin-top: 15rpx;  
+   text-align: center;
+   font-size: 40rpx; 
 }
-.input{
+.btn{
+  width:500rpx;
   margin-left: 10rpx;
-  text-align: center; 
-  border-style: solid;
-  border-width: 1rpx;
-  border-color:black;
+  text-align: center;   
 }
-.button{
-   width: 200rpx;
+ .input{  
+   color: #aaa; 
+} 
+.input2{  
+   width:500rpx;
+   font-size: 30rpx; 
+   margin-left: 10rpx;
+   color: #aaa; 
+   border: solid 1rpx black; 
+   border-radius: 10rpx;
 }

@@ -2,8 +2,11 @@
 <view class="container">
   <view class='header'>
     <view class='serach'> 
-        <input class='input' placeholder="搜索" bindfocus="serachinputbindfocus"/>
+    <button class='input' type="primary" plain bindtap='serachinputbindfocus'>
+        <input class='input'  disabled='true' placeholder='搜索'></input>
+    </button>
     </view>
+   
     <view class="userinfo"> 
         <image class='userinfo-avatar' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"
         src="../../images/Yong.png" background-size="cover"></image> 

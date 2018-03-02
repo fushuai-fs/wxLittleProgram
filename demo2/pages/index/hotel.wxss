@@ -1,1 +1,11 @@
 /* pages/index/hotel.wxss */
+.itemstyle{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top:10rpx;
+  height: 80rpx; 
+  font-size: 40rpx;
+  border-bottom:solid 1rpx grey; 
+  padding-left: 30rpx;
+}
+ 

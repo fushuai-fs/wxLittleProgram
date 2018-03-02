@@ -10,11 +10,13 @@
 .serach{
   flex-direction: row;
    flex: 9;
+   
 }
-.input{ 
-   height: 85rpx;
-   text-align: center;
-   color: #aaa;
+.input{  
+   color: #aaa; 
+   width: 100%;
+   height: 80rpx;
+   font-size: 40rpx; 
 }
  .userinfo { 
   padding: 5rpx ;

@@ -5,5 +5,7 @@
   margin-top:10rpx;
   height: 80rpx; 
   font-size: 60rpx;
+  border-bottom:solid 1rpx grey; 
+  padding-left: 30rpx;
 }
  

@@ -1,2 +1,4 @@
 <!--pages/index/hotel.wxml-->
-<text>pages/index/hotel.wxml</text>
+ <view class='itemstyle'  wx:key='{{index}}' wx:for="{{array}}"> 
+   <view bindtap='itemclick' data-value='{{item.HotelCode}}'>{{item.ChineseHotelName}}</view> 
+  </view>
