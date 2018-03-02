@@ -1,7 +1,7 @@
 /* pages/index/serach.wxss */
 .row{ 
    display: flex;
-   margin-top: 10rpx; 
+   margin-top: 10rpx;  
 }
 .input{
   margin-left: 10rpx;
@@ -9,4 +9,7 @@
   border-style: solid;
   border-width: 1rpx;
   border-color:black;
+}
+.button{
+   width: 200rpx;
 }

@@ -1,38 +1,22 @@
-// pages/index/serach.js
+// pages/index/city.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    city:'北京',
-    hotel:''
+    array:[1,2,3,4,5]
   },
- 
-  confirm:function(){
-    console.log('开始搜索啦');
-  },
- 
-  cityinputbindfocustest: function (e) {
+  itemclick:function(e){ 
+    var city = e.target.dataset.value;
     let pages = getCurrentPages();//当前页面
     let prevPage = pages[pages.length - 2];//上一页面
     prevPage.setData({//直接给上移页面赋值 
-      refcity: this.data.city
+      refcity: city
     });
     wx.navigateBack({//返回
       delta: 1
     }) 
-  },
-  /*选择城市*/
-  cityinputbindfocus: function (e) {
-   wx.navigateTo({
-     url: './city',
-   })
-  },
-  hotelinputbindfocus:function(e){
-    wx.navigateTo({
-      url: './hotel?city='+this.data.city,
-    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -52,13 +36,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let pages = getCurrentPages();
-    let currPage = pages[pages.length - 1]; 
-    if (typeof (currPage.data.refcity) != "undefined") {
-      this.setData({//将携带的参数赋值
-        city: currPage.data.refcity
-      });
-    }
+  
   },
 
   /**

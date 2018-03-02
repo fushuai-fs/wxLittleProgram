@@ -65,14 +65,7 @@ Page({
  * 生命周期函数--监听页面显示
  */
   onShow: function () {
-    let pages = getCurrentPages();
-    let currPage = pages[pages.length - 1];
-   
-    if (typeof (currPage.data.refaddress) !="undefined"){ 
-      this.setData({//将携带的参数赋值
-        address: currPage.data.refaddress
-      });
-    }
+    
      
   }
 })

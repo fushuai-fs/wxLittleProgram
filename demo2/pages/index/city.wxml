@@ -1,0 +1,5 @@
+<!--pages/index/city.wxml-->
+ <view class='itemstyle'  wx:key='{{index}}' wx:for="{{array}}"> 
+   <view bindtap='itemclick' data-value='{{item}}'>{{item}}</view> 
+  </view>
+

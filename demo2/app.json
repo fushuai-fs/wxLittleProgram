@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs", 
-    "pages/index/serach"
+    "pages/logs/logs",
+    "pages/index/serach",
+    "pages/index/city",
+    "pages/index/hotel"
   ],
   "window": {
     "backgroundTextStyle": "light",

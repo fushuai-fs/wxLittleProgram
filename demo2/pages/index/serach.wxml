@@ -3,11 +3,11 @@
 <view class='container'>
     <view class='row'>
         <text>城　市 </text>
-        <input class='input' placeholder="请选择" bindfocus="cityinputbindfocus"/>
+        <input class='input' placeholder="请选择" value='{{city}}' bindfocus="cityinputbindfocus"/>
     </view>
       <view class='row'>
         <text>酒　店 </text>
-        <input class='input' placeholder="请选择" bindfocus="hotelinputbindfocus"/>
+        <input class='input' placeholder="请选择" value='{{hotel}}' bindfocus="hotelinputbindfocus"/>
     </view>
       <view class='row'>
         <text>房　型 </text>
@@ -22,6 +22,6 @@
         <input class='input' placeholder="房间数" type='number'/>
     </view>
     　<view class='row'>
-       　<button type='primary' bindtap="confirm"> 搜索 </button>
+       　<button class='button' type='primary' size='mini' bindtap="confirm"> 搜 索 </button>
     </view>
 </view>

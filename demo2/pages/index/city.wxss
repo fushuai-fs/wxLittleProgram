@@ -1,0 +1,9 @@
+/* pages/index/city.wxss */
+.itemstyle{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top:10rpx;
+  height: 80rpx; 
+  font-size: 60rpx;
+}
+ 
