@@ -4,26 +4,26 @@
     <view class='row'>
         <text>城　市 </text>
          <button class="btn" type='default' plain size='mini' bindtap='cityinputbindfocus'> 
-             <input class='input' placeholder="请选择" value='{{city}}'/>
+             <input class='input' disabled='true' placeholder="请选择" value='{{city}}'/>
          </button> 
     </view>
       <view class='row'>
         <text>酒　店 </text>
            <button class="btn" type='default' plain size='mini' bindtap='hotelinputbindfocus'> 
-             <input class='input' placeholder="请选择" value='{{hotel.ChineseHotelName}}'/>
+             <input class='input' disabled='true' placeholder="请选择" value='{{hotel.ChineseHotelName}}'/>
          </button>
       
     </view>
       <view class='row'>
         <text>房　型 </text>
           <button class="btn" type='default' plain size='mini' bindtap='roominputbindfocus'> 
-             <input class='input' placeholder="请选择" value='{{room}}'/>
+             <input class='input' disabled='true' placeholder="请选择" value='{{room}}'/>
          </button> 
     </view>
       <view class='row' >
         <text>日　期 </text>
          <button class="btn" type='default' plain size='mini' bindtap='dateinputbindfocus'> 
-             <input class='input' placeholder="请选择" value='{{daterange}}'/>
+             <input class='input' disabled='true' placeholder="请选择" value='{{checkin!="" && checkout!=""?"入住"+checkinshort+",离店"+checkoutshort:""}}'/>
          </button>  
     </view>
       <view class='row' >
@@ -32,12 +32,6 @@
     </view>
     　<view class='row'>
        　<button class='button' type='primary' size='mini' bindtap="confirm"> 搜 索 </button>
-    </view>
-    <view class='row'>
-         <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    <view class="picker">
-      当前选择: {{date}}
-    </view>
-  </picker>
-    </view>
+    </view> 
+ 
 </view>

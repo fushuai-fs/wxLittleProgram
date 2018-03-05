@@ -8,12 +8,25 @@ Page({
     city:'',
     hotel:{},
     room:'',
-    daterange:'',
+    checkin: '', checkout: '', checkinshort:'',checkoutshort:'',
     roomnum:1
   },
- 
+
+/****************点击事件*********************/
   confirm:function(){
-    console.log('开始搜索啦');
+    let pages = getCurrentPages();//当前页面
+    let prevPage = pages[pages.length - 2];//上一页面
+    prevPage.setData({//直接给上移页面赋值 
+      refcity: this.data.city,
+      refhotel:this.data.hotel,
+      refroom:this.data.room,
+      refcheckin:this.data.checkin,
+      refcheckout:this.data.checkout,
+      refroomnum: this.data.roomnum
+    });
+    wx.navigateBack({//返回
+      delta: 1
+    }) 
   },
  
   cityinputbindfocustest: function (e) {
@@ -25,7 +38,7 @@ Page({
     wx.navigateBack({//返回
       delta: 1
     }) 
-  },
+  }, 
   /*选择城市*/
   cityinputbindfocus: function (e) {
    wx.navigateTo({
@@ -37,6 +50,15 @@ Page({
       url: './hotel?city='+this.data.city,
     })
   },
+   
+  dateinputbindfocus:function(e){
+    wx.navigateTo({
+      url: './btCalendar',
+    })
+  },
+/****************点击事件*********************/
+
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -66,6 +88,13 @@ Page({
     if (typeof (currPage.data.refhotel) !="undefined"){
       this.setData({
         hotel: currPage.data.refhotel
+      });
+    }
+    if (typeof (currPage.data.refcheckin) != "undefined" && typeof (currPage.data.refcheckout) != "undefined"){
+      console.log("serach接收到日期" + currPage.data.refcheckin + "|||" + currPage.data.refcheckout);
+      this.setData({ 
+        checkin: currPage.data.refcheckin, checkout: currPage.data.refcheckout
+        , checkinshort: currPage.data.refcheckin.substring(5), checkoutshort: currPage.data.refcheckout.substring(5)
       });
     }
   },

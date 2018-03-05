@@ -1,0 +1,41 @@
+<!--pages/index/btCalendar.wxml-->
+<!-- [{
+	"month":"2018年03月",
+	"days":[{
+		"id":1, "date":"2018-03-05","number":"05","flag":"入住"
+	},{
+		"id":2, "date":"2018-03-06","number":"06","flag":"离店"
+	}{
+		"id":3, "date":"2018-03-07","number":"07","flag":"离店"
+	}]
+}] -->
+<view>
+  <view>
+     <view class='week'>
+      <view class='weekday weekend'>日</view>
+      <view class='weekday'>一</view> 
+      <view class='weekday'>二</view>
+      <view class='weekday'>三</view>
+      <view class='weekday'>四</view>
+      <view class='weekday'>五</view>
+      <view class='weekday weekend'>六</view>
+     </view>
+  </view>
+  <view class='win' wx:key='{{index}}' wx:for="{{array}}">
+    <view  class='month' >{{item.month}}</view>
+    <view class='monthdays'>
+     <view class='days {{ checkin == item.date || checkout==item.date ?"selectdate": (checkin <= item.date && checkout>=item.date?"selectdate":"")}}' 
+     bindtap="selectdate" wx:key='{{index}}' wx:for="{{item.days}}"
+      data-id="{{item.id}}" data-date="{{item.date}}"
+       > 
+      <view class='day'>{{item.number}}</view>   
+      <view class='day checkdate'>{{checkin == item.date? "入住":checkout==item.date?"离店":""}}</view>
+    </view>
+    </view>
+  </view>
+
+</view>
+
+
+
+

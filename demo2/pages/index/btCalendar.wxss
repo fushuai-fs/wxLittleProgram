@@ -1,0 +1,47 @@
+/* pages/index/btCalendar.wxss */
+.week{
+  display: flex;  
+   text-align: center;
+   background-color:lightgray;
+}
+.weekday{ 
+  flex:1;
+}
+.weekend{color: lightseagreen}
+
+ .selectdate{
+   background-color: lightseagreen;
+ }
+
+
+.month{
+  text-align: center;
+  background-color: white;
+}
+.monthdays{  
+  display: flex;
+   text-align: center;
+   background-color:white;
+   margin-bottom: 30rpx; 
+   flex-wrap:wrap;
+   justify-content: space-around;
+   
+}
+ .days{ 
+   height: 100rpx;  
+   min-width: 105rpx;   
+   border-bottom: solid 1rpx lightgray; 
+} 
+ .nulldays{ 
+   height: 100rpx;  
+   min-width: 105rpx;   
+   border-bottom: solid 1rpx white; 
+} 
+.day{
+   text-align: center;
+   }
+.checkdate{
+  font-size: 25rpx;
+  
+}
+ 

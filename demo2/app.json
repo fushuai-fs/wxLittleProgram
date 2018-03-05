@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/index/serach",
     "pages/index/city",
-    "pages/index/hotel"
+    "pages/index/hotel",
+    "pages/index/btCalendar"
   ],
   "window": {
     "backgroundTextStyle": "light",
