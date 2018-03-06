@@ -5,8 +5,10 @@
     "pages/index/serach",
     "pages/index/city",
     "pages/index/hotel",
-    "pages/index/btCalendar"
+    "pages/index/btCalendar",
+    "pages/index/rooms"
   ],
+  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

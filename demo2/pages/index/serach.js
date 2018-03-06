@@ -1,4 +1,7 @@
 // pages/index/serach.js
+//获取应用实例
+// const app = getApp()
+
 Page({
 
   /**
@@ -14,19 +17,21 @@ Page({
 
 /****************点击事件*********************/
   confirm:function(){
-    let pages = getCurrentPages();//当前页面
-    let prevPage = pages[pages.length - 2];//上一页面
-    prevPage.setData({//直接给上移页面赋值 
-      refcity: this.data.city,
-      refhotel:this.data.hotel,
-      refroom:this.data.room,
-      refcheckin:this.data.checkin,
-      refcheckout:this.data.checkout,
-      refroomnum: this.data.roomnum
-    });
-    wx.navigateBack({//返回
-      delta: 1
-    }) 
+    this.dialog.showDialog();
+
+    // let pages = getCurrentPages();//当前页面
+    // let prevPage = pages[pages.length - 2];//上一页面
+    // prevPage.setData({//直接给上移页面赋值 
+    //   refcity: this.data.city,
+    //   refhotel:this.data.hotel,
+    //   refroom:this.data.room,
+    //   refcheckin:this.data.checkin,
+    //   refcheckout:this.data.checkout,
+    //   refroomnum: this.data.roomnum
+    // });
+    // wx.navigateBack({//返回
+    //   delta: 1
+    // }) 
   },
  
   cityinputbindfocustest: function (e) {
@@ -56,6 +61,16 @@ Page({
       url: './btCalendar',
     })
   },
+  //取消事件
+  _cancelEvent() {
+    console.log('你点击了取消');
+    this.dialog.hideDialog();
+  },
+  //确认事件
+  _confirmEvent() {
+    console.log('你点击了确定');
+    this.dialog.hideDialog();
+  },
 /****************点击事件*********************/
 
 
@@ -70,7 +85,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    //获得dialog组件
+    this.dialog = this.selectComponent("#dialog");
   },
 
   /**

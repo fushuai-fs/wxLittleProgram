@@ -1,6 +1,14 @@
 <!--pages/index/serach.wxml-->
 
 <view class='container'>
+ <dialog id='dialog' 
+      title='我是标题' 
+      content='恭喜你，学会了小程序组件' 
+      cancelText='知道了' 
+      confirm='谢谢你'
+      bind:cancelEvent="_cancelEvent"  
+      bind:confirmEvent="_confirmEvent">
+    </dialog>
     <view class='row'>
         <text>城　市 </text>
          <button class="btn" type='default' plain size='mini' bindtap='cityinputbindfocus'> 
@@ -33,5 +41,5 @@
     　<view class='row'>
        　<button class='button' type='primary' size='mini' bindtap="confirm"> 搜 索 </button>
     </view> 
- 
+  
 </view>
