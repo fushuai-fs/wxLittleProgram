@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "搜索酒店"
+  "navigationBarTitleText": "搜索酒店",
+  "usingComponents": {
+    "dialog": "/component/dialog"
+  }
 }

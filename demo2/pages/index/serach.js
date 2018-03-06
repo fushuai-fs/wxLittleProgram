@@ -58,7 +58,7 @@ Page({
    
   dateinputbindfocus:function(e){
     wx.navigateTo({
-      url: './btCalendar',
+      url: './btCalendar?checkin='+this.data.checkin+'&checkout='+this.data.checkout,
     })
   },
   //取消事件
