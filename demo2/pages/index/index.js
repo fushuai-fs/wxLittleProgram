@@ -93,7 +93,7 @@ Page({
    
     var that = this
     wx.request({
-      url: 'http://localhost:63147/api/App/hotel',
+      url: 'http://172.16.2.162:801/api/App/hotel',
       method: 'POST',
       dataType: 'json',
       data: {

@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    dialog: { title: '提示', content: '提示内容' },
     city:'',
     hotel:{},
     room:'',
@@ -17,21 +18,24 @@ Page({
 
 /****************点击事件*********************/
   confirm:function(){
-    this.dialog.showDialog();
+    //  this.setData({
+    //   dialog: { title: '', content: '你要干什么？' }
+    // }); 
+    //  this.dialog.showDialog();
 
-    // let pages = getCurrentPages();//当前页面
-    // let prevPage = pages[pages.length - 2];//上一页面
-    // prevPage.setData({//直接给上移页面赋值 
-    //   refcity: this.data.city,
-    //   refhotel:this.data.hotel,
-    //   refroom:this.data.room,
-    //   refcheckin:this.data.checkin,
-    //   refcheckout:this.data.checkout,
-    //   refroomnum: this.data.roomnum
-    // });
-    // wx.navigateBack({//返回
-    //   delta: 1
-    // }) 
+    let pages = getCurrentPages();//当前页面
+    let prevPage = pages[pages.length - 2];//上一页面
+    prevPage.setData({//直接给上移页面赋值 
+      refcity: this.data.city,
+      refhotel:this.data.hotel,
+      refroom:this.data.room,
+      refcheckin:this.data.checkin,
+      refcheckout:this.data.checkout,
+      refroomnum: this.data.roomnum
+    });
+    wx.navigateBack({//返回
+      delta: 1
+    }) 
   },
  
   cityinputbindfocustest: function (e) {
