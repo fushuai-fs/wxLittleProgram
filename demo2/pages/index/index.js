@@ -4,12 +4,18 @@ const app = getApp()
 
 Page({
   data: { 
+    dialog: { title: '提示', content:'提示内容'},
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    address:""
+    address:"",
+    array:[]
   },
+  /********************点击事件**************************/
   showDialog:function() { 
+    this.setData({
+      dialog: {title:'',content:'你要干什么？'}
+    });
     this.dialog.showDialog();
   },
 
@@ -36,6 +42,7 @@ Page({
       url: './serach'
     })
   },
+  /********************点击事件**************************/
 
   onLoad: function (option) {
     console.log(option);
@@ -65,6 +72,9 @@ Page({
         }
       })
     }
+
+
+   
   },
  
   getUserInfo: function (e) {
@@ -80,8 +90,28 @@ Page({
  * 生命周期函数--监听页面显示
  */
   onShow: function () {
-    
-     
+   
+    var that = this
+    wx.request({
+      url: 'http://localhost:63147/api/App/hotel',
+      method: 'POST',
+      dataType: 'json',
+      data: {
+        cityName: ''
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res)
+        // if (res.data.msg == 'success') {
+          that.setData({
+            array: res.data,
+          });
+        // }
+        // console.log(that.data.array)
+      }
+    }) 
   },
     /**
    * 生命周期函数--监听页面初次渲染完成

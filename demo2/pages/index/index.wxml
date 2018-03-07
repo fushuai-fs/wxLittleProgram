@@ -14,19 +14,31 @@
         <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image> 
       </block>
       <text class="userinfo-nickname">{{'我的'}}</text> 
-    </view>
+    </view> 
   </view>
 
+  <view>
+      <view class='itemstyle'  wx:key='{{index}}' wx:for="{{array}}">
+        <view bindtap='itemclick' data-HotelCode='{{item.HotelCode}}' data-SupplierCode='{{item.SupplierCode}}'>
+            <view class='hotel'>{{item.HotelNameCN}}</view>
+            <view class='hotelen'>{{item.HotelNameGB}}</view>
+            <view class='address'>{{item.Address}}</view>
+            <view class='avgprice'>{{"平均价格：CNY"+item.avgPrice}}</view>
+        </view> 
+     </view>
+  </view>
+
+
+
+
   <dialog id='dialog' 
-      title='我是标题' 
-      content='恭喜你，学会了小程序组件' 
-      cancelText='知道了' 
-      confirm='谢谢你'
+      title='{{dialog.title}}' 
+      content='{{dialog.content}}'  
       bind:cancelEvent="_cancelEvent"  
       bind:confirmEvent="_confirmEvent">
-    </dialog>
+  </dialog>
     
-    <!-- <button type="primary" bindtap="showDialog"> ClickMe! </button> -->
+     <!-- <button type="primary" bindtap="showDialog"> ClickMe! </button>  -->
  
  
 </view>
