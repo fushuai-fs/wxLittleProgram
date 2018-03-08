@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/category/category",
     "pages/index/index",
     "pages/logs/logs",
     "pages/index/serach",
@@ -14,5 +15,34 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "酒店",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#3cc51f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "images/icon_cate.png",
+        "selectedIconPath": "images/icon_cate_selected.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_cart.png",
+        "selectedIconPath": "images/icon_cart_selected.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_member.png",
+        "selectedIconPath": "images/Yong.png",
+        "text": "我"
+      }
+    ]
   }
 }
