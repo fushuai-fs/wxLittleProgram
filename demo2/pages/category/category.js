@@ -12,10 +12,9 @@ Page({
         , { "objectId": 6, "title": "ff" }
         , { "objectId": 7, "title": "g" }
       ],
-        subCategories: [],
-        highlight:0,
-        banner: '',
-        sidebarHeight:200
+      contents: [],
+      highlight:0, 
+      banner:'',
     },
     onLoad: function(){ 
        
@@ -30,8 +29,7 @@ Page({
       // this.getCategory(parent);
       // 设定高亮状态 
        this.setData({ highlight: objectId}); 
-      this.setImageWidth();
-      this.setSideHeight();
+ 
     },
     tapCategoryIsShow:function(e){
       console.clear();
@@ -43,19 +41,7 @@ Page({
       console.log(update);
       this.setData({ topCategories:update});
     },
-    setImageWidth: function () {
-      var screenWidth = getApp().screenWidth;
-      var imageWidth = (screenWidth - 130) / 3 - 5;
-      this.setData({
-        imageWidth: imageWidth
-      });
-    },
-    setSideHeight: function () {
-      this.setData({
-        sidebarHeight: getApp().screenHeight
-      });
-    },
- 
+   
    
  
  
