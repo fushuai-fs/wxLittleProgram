@@ -4,7 +4,9 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
+    var logs = wx.getStorageSync('logs') || [];
+    console.log(Date.now()); 
+    //将一个或多个元素添加到数组的开头
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 

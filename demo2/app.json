@@ -38,7 +38,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/logs/logs",
         "iconPath": "images/icon_member.png",
         "selectedIconPath": "images/Yong.png",
         "text": "我"
