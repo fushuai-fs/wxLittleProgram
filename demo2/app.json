@@ -7,9 +7,10 @@
     "pages/index/city",
     "pages/index/hotel",
     "pages/index/btCalendar",
-    "pages/index/rooms"
+    "pages/index/rooms",
+    "pages/detail/suncate",
+    "pages/detail/categorydetail"
   ],
-  
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
