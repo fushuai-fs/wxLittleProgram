@@ -16,10 +16,10 @@ App({
       success: function (res) {
         if (res.code) {
           that.code = res.code;
-          console.log(res.code);
+          console.log(res);
           // 获取openId并缓存
           wx.request({
-            url: '',
+            url: 'http://172.16.2.162:8080/login',
             data: {
               code: res.code,
             },
@@ -28,7 +28,8 @@ App({
               'content-type': 'application/x-www-form-urlencoded'
             },
             success: function (response) {
-              that.openid = response.data.openid;
+              // that.openid = response.data.openid;
+              console.log(response.data);
             }
           });
         } else {

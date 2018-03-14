@@ -7,8 +7,7 @@
     "pages/index/city",
     "pages/index/hotel",
     "pages/index/btCalendar",
-    "pages/index/rooms",
-    "pages/detail/suncate",
+    "pages/index/rooms", 
     "pages/detail/categorydetail"
   ],
   "window": {
