@@ -10,28 +10,29 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    
+
     var that = this; 
     wx.login({
       success: function (res) {
         if (res.code) {
           that.code = res.code;
           console.log(res);
+          console.log('res111111111111111111111111111');
           // 获取openId并缓存
-          wx.request({
-            url: 'http://172.16.2.162:8080/login',
-            data: {
-              code: res.code,
-            },
-            method: 'POST',
-            header: {
-              'content-type': 'application/x-www-form-urlencoded'
-            },
-            success: function (response) {
-              // that.openid = response.data.openid;
-              console.log(response.data);
-            }
-          });
+          // wx.request({
+          //   url: 'http://172.16.2.162:8080/login',
+          //   data: {
+          //     code: res.code,
+          //   },
+          //   method: 'POST',
+          //   header: {
+          //     'content-type': 'application/x-www-form-urlencoded'
+          //   },
+          //   success: function (response) {
+          //     // that.openid = response.data.openid;
+          //     console.log(response.data);
+          //   }
+          // });
         } else {
           console.log('获取用户登录态失败！' + res.errMsg)
         }
@@ -48,8 +49,13 @@ App({
     });
            wx.getUserInfo({
             success: res => {
+              console.log('22222222222222222');
               console.log(res);
+              console.log('22222222222222222');
               console.log(res.rawData);
+              console.log('userInfo');
+              console.log(res.userInfo);
+              console.log('22222222222222222');
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回

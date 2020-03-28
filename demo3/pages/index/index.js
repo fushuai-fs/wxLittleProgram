@@ -50,5 +50,20 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    return {
+      title:"这个是我分享出来的东西",
+      success:function(res){
+        console.log(res,"转发成功")
+      },
+      fail:function(res){
+        console.log(res,"转发失败")
+      }
+    }
   }
 })

@@ -92,26 +92,26 @@ Page({
   onShow: function () {
    
     var that = this
-    wx.request({
-      url: 'http://172.16.2.162:801/api/App/hotel',
-      method: 'POST',
-      dataType: 'json',
-      data: {
-        cityName: ''
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res)
-        // if (res.data.msg == 'success') {
-          that.setData({
-            array: res.data,
-          });
-        // }
-        // console.log(that.data.array)
-      }
-    }) 
+    // wx.request({
+    //   url: 'http://172.16.2.162:801/api/App/hotel',
+    //   method: 'POST',
+    //   dataType: 'json',
+    //   data: {
+    //     cityName: ''
+    //   },
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     console.log(res)
+    //     // if (res.data.msg == 'success') {
+    //       that.setData({
+    //         array: res.data,
+    //       });
+    //     // }
+    //     // console.log(that.data.array)
+    //   }
+    // }) 
   },
     /**
    * 生命周期函数--监听页面初次渲染完成
