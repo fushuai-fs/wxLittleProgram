@@ -2,20 +2,24 @@
 <import src="item.wxml"/>
 
 <view class="container">
+
+      <button  bindtap="wxlogin"> 登录 </button>
+
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> 
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+    <icon  class="iconfont icon-dianwangzhuose"/>
   </view>
-  <view  wx:for="{{array}}"> {{item}} </view>
+  <!-- <view  wx:for="{{array}}"> {{item}} </view> -->
   <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
   <view wx:elif="{{view == 'APP'}}"> APP </view>
   <view wx:else="{{view == 'MINA'}}"> MINA </view>
-  <block wx:for="{{items}}">
+  <!-- <block wx:for="{{items}}">
   <template is="msgItem" data="{{...item}}"/>
-  </block>
+  </block> -->
   
   <wxs src="./index.wxs" module="tools" />
   <view> {{tools.foo}} </view>

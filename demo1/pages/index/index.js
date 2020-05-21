@@ -88,7 +88,13 @@ Page({
     }
   },
   // 生命周期函数--监听页面显示
-  onShow:function(){},
+  onShow:function(){
+    wx.login({
+      complete: (res) => {
+        console.log('wx.login',res);
+      },
+    })
+  },
 
   // 页面下拉事件
   onPullDownRefresh:function(options){
@@ -115,12 +121,16 @@ Page({
     console.log(item.text)
     },
   getUserInfo: function(e) {
-    console.log(e)
+    console.log('1111111111111',e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  wxlogin:function(e){
+    console.log('222222222222222',e)
+
   },
   // 获取地理位置
   getlocationFun:function(e){ 

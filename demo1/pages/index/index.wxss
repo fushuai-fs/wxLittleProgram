@@ -27,3 +27,29 @@
 .other-button-hover {
   background-color: blue;
 }
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1587729914041'); /* IE9 */
+  src: url('iconfont.eot?t=1587729914041#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAO8AAsAAAAAB7QAAANvAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDFIJoATYCJAMMCwgABCAFhG0HQBu4BsgekiQBRBRIKAA4hQUInjCP700mze+mC9gnEiefAB0B9mrpLqFVWdpmsKVWldLc5bL33+/nfhOKbB5ZhUcoLIruQTEoosmN2eKLw2kTPJwPlMscW6MuwHhroGMNaosWSILecrjxKjy61kMAT1YGidSue5hk9VhINwFk8ACDs/qUAluTLoQIrmSsRRYREJrZ5gqw0P++vKGkhGAIFNK3ed+tIlt9Hvxu1UnxJDq7CJjj6QBxEihQGIYF6VpqaE9VGChMFV4XVNfHOyyCGcsdx+AzDJ6jf3hgEBAHSU0MQH4cNPA8sBmxcCtinXWqAuB6NI6HsXuEt0MiNLkNrHVqbfYo+9h8JuLbJm7tadO+kVTSld2cyXSmpU3Hpja+tUTZ22RS6WQmK3i5CT+M045dcY/gcvsdd16Vetmy5dvTVTKb79ZJcv5+Lq2wfO7KFb0Ty+S9UTR3N3Qz626U9rLmtPdzToI/cSurXr9fiM2TJ9p5t8nuFuVHMw69nl7y6qUyV0qD9NLViJrsO34Na55LZpt6682C1eXSta3G8/zkWpGx7/OVadnqff66UI0a/980pbrW3qM6zlDskbjf1X5Xrjh9WOzxd+n8oaEDcgMfac7BHMp6OnSpTbL99Kl2n9C40dXfRbBH3bpqvdsfk5X6WPR/kljSN0ljSf7vrNuYVCU95022t9lWZ/1ffVItd7bKEFHJ2qhnLE0ONHH4aQ8ABsSX9VWnf9ZveFDiWctubZW/hU0WgEcXvv/yx8STLDoJCDHQmvlrmC0LrMEmSrUaw2ZYYaURDTcuxxtCfkgmQEq++5vSwGKdEEpMBIYEsoASkhtpsYUhIKI0OEKqgacQO5MjUqGpQmwioCCXAEJyHsCQlDOgJOcFabFfEJCWCjiSi4KnraSaMyKvDPC1RiInLELhBCyhfMnU1Bikx9EouVwn2T4+jTq03DBWtHg2vIM+6jEGhGVjnEiC1MqDbdgMXVdBoJWNgoZNomB+pFjfsisNC+WxRmqhQTgEUgQocAJgIVD4SLc00Zj7fBzEoIQLR9fk1SnTIJoQq3lgjGFGWyB3BH6rvGu5JKSMwTgEIQEkGoUHsA06xKUBBRCUt7JBBMQwZg9fwDwjuJhsKxieX+Q93zLAQ/qoGFGxJO09gPtHLMc4NUsqxBrPfoKMAQA=') format('woff2'),
+  url('iconfont.woff?t=1587729914041') format('woff'),
+  url('iconfont.ttf?t=1587729914041') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1587729914041#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dianwangzhuose:before {
+  content: "\e6a3";
+}
+
+.icon-zhuye:before {
+  content: "\e605";
+}
+
